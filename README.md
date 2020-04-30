@@ -4,9 +4,10 @@
 
 This plugin can support to preview a theme before you click to the button save. You can also share the link of the preview to someone
 
+[![](https://media.giphy.com/media/h4NFhO9hrtHpifxpS6/giphy.gif)](https://media.giphy.com/media/h4NFhO9hrtHpifxpS6/giphy.gif)
 ## Features
 
-* [x] Preview theme in Storefront sale channel detail.
+* [x] Preview theme in storefront sales channel.
 * [ ] Preview theme before save in `Admin > content > Themes > Theme detail.
 
 ## Installation
