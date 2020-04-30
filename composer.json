@@ -1,0 +1,35 @@
+{
+  "name": "mac/theme-preview",
+  "description": "Theme preview plugin for Shopware 6",
+  "version": "0.30.4",
+  "type": "shopware-platform-plugin",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Hung Mac"
+    }
+  ],
+  "require": {
+    "shopware/core": "~6.2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "MacThemePreview\\": "src/"
+    }
+  },
+  "extra": {
+    "shopware-plugin-class": "MacThemePreview\\MacThemePreview",
+    "label": {
+      "de-DE": "Theme Preview Plugin for Shopware 6",
+      "en-GB": "Theme Preview Plugin für Shopware 6"
+    }
+  },
+  "suggest": {
+    "shopware/storefront": "Require '*'. Enables special feature for custom theme id",
+    "shopware/administration": "Require '*'. Allows you to to set up the plugin easily"
+  },
+  "conflict": {
+    "shopware/storefront": "<6,>=7",
+    "shopware/administration": "<6,>=7"
+  }
+}

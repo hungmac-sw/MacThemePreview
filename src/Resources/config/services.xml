@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="MacThemePreview\Service\MacThemePreviewService">
+            <argument type="service" id="Shopware\Storefront\Theme\ThemeService"/>
+            <argument type="service" id="shopware.filesystem.public"/>
+            <argument type="service" id="theme.repository"/>
+        </service>
+
+        <service id="MacThemePreview\Api\MacThemePreviewController" public="true">
+            <argument type="service" id="MacThemePreview\Service\MacThemePreviewService"/>
+        </service>
+
+        <service id="MacThemePreview\Subscriber\MacThemePreviewSubscriber">
+            <tag name="kernel.event_subscriber"/>
+        </service>
+    </services>
+</container>
