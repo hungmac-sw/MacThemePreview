@@ -1,7 +1,7 @@
 {
   "name": "mac/theme-preview",
   "description": "Theme preview plugin for Shopware 6",
-  "version": "0.30.4",
+  "version": "1.0.0",
   "type": "shopware-platform-plugin",
   "license": "MIT",
   "authors": [
@@ -9,9 +9,6 @@
       "name": "Hung Mac"
     }
   ],
-  "require": {
-    "shopware/core": "~6.2.0"
-  },
   "autoload": {
     "psr-4": {
       "MacThemePreview\\": "src/"
@@ -20,8 +17,8 @@
   "extra": {
     "shopware-plugin-class": "MacThemePreview\\MacThemePreview",
     "label": {
-      "de-DE": "Theme Preview Plugin for Shopware 6",
-      "en-GB": "Theme Preview Plugin für Shopware 6"
+      "de-DE": "Theme Preview Plugin für Shopware 6",
+      "en-GB": "Theme Preview Plugin for Shopware 6"
     }
   },
   "suggest": {

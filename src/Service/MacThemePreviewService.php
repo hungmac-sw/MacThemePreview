@@ -2,6 +2,7 @@
 
 namespace MacThemePreview\Service;
 
+use League\Flysystem\FileNotFoundException;
 use Shopware\Core\Framework\Context;
 use League\Flysystem\FilesystemInterface;
 use Shopware\Core\Framework\DataAbstractionLayer\EntityRepositoryInterface;
@@ -58,13 +59,19 @@ class MacThemePreviewService
         $themePrefix = md5($theme->getId() . $salesChannelId);
         $outputPath = 'theme' . DIRECTORY_SEPARATOR . $themePrefix;
         $scriptFilepath = $outputPath . DIRECTORY_SEPARATOR . 'js' . DIRECTORY_SEPARATOR . 'all.js';
-        if ($this->publicFilesystem->has($scriptFilepath)) {
-            $compliedTime = $this->publicFilesystem->getTimestamp($scriptFilepath);
-            $theme->getUpdatedAt()->getTimestamp();
-            if ($compliedTime < $theme->getUpdatedAt()->getTimestamp()) {
+
+        try {
+            if (empty($theme->getUpdatedAt()) && !$this->publicFilesystem->has($scriptFilepath)) {
                 return true;
             }
-        } else {
+
+            if ($theme->getUpdatedAt()) {
+                $compliedTime = $this->publicFilesystem->getTimestamp($scriptFilepath);
+                if ($compliedTime < $theme->getUpdatedAt()->getTimestamp()) {
+                    return true;
+                }
+            }
+        } catch (FileNotFoundException $e) {
             return true;
         }
 

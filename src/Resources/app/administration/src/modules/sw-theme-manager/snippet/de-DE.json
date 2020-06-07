@@ -1,5 +1,8 @@
 {
   "mac-theme-preview": {
-    "previewButton": "Vorschau"
+    "previewButton": "Vorschau",
+    "buttonCopyLink": "Kopieren & teilen",
+    "notificationCopyLinkSuccess": "URL in Zwischenablage kopiert.",
+    "notificationEmptyDomain": "Dieser Vertriebskanal hat keine Domain."
   }
 }

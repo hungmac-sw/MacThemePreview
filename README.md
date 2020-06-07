@@ -1,4 +1,4 @@
-# Preview theme for Shopware 6
+# Theme preview for Shopware 6
 
 [![Gitter](https://badges.gitter.im/mac/community.svg)](https://gitter.im/mac/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 

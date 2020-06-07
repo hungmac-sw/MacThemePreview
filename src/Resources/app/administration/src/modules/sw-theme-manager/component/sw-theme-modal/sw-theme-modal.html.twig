@@ -1,5 +1,9 @@
 {% block sw_theme_modal_footer %}
     <template slot="modal-footer">
+        <sw-button v-if="selected" @click="copyToClipboard" :isLoading="isLoadingCopy">
+            {{ $tc('mac-theme-preview.buttonCopyLink') }}
+        </sw-button>
+
         <sw-button v-if="selected" @click="selectPreview" :isLoading="isLoadingPreview">
             {{ $tc('mac-theme-preview.previewButton') }}
         </sw-button>
