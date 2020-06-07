@@ -4,7 +4,7 @@ import ApiService
 class MacThemePreviewService extends ApiService {
     constructor(httpClient, loginService, apiEndpoint = 'mac-theme-preview') {
         super(httpClient, loginService, apiEndpoint);
-        this.name = 'macThemePreviewService';
+        this.name = 'MacThemePreviewService';
     }
 
     themeCompile(salesChannelId, themeId) {

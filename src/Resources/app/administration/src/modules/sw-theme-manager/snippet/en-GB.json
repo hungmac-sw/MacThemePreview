@@ -1,5 +1,10 @@
 {
   "mac-theme-preview": {
-    "previewButton": "Preview"
+    "previewButton": "Preview",
+    "buttonCopyLink": "Copy & Share",
+    "notification": {
+      "notificationCopyLinkSuccess": "URL has been copied to clipboard.",
+      "notificationEmptyDomain": "This sales channel have no domain."
+    }
   }
 }

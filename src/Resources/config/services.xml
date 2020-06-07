@@ -12,10 +12,19 @@
         </service>
 
         <service id="MacThemePreview\Api\MacThemePreviewController" public="true">
-            <argument type="service" id="MacThemePreview\Service\MacThemePreviewService"/>
+            <argument type="service" id="MacThemePreview\Service\MacThemePreviewService" />
+        </service>
+
+        <service id="MacThemePreview\Resources\snippet\en_GB\SnippetFile_en_GB" public="true">
+            <tag name="shopware.snippet.file" priority="100"/>
+        </service>
+
+        <service id="MacThemePreview\Framework\Cookie\CustomCookieProvider" decorates="Shopware\Storefront\Framework\Cookie\CookieProviderInterface">
+            <argument type="service" id="MacThemePreview\Framework\Cookie\CustomCookieProvider.inner" />
         </service>
 
         <service id="MacThemePreview\Subscriber\MacThemePreviewSubscriber">
+            <argument type="service" id="Doctrine\DBAL\Connection" />
             <tag name="kernel.event_subscriber"/>
         </service>
     </services>
